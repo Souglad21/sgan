@@ -71,3 +71,23 @@ python scripts/evaluate_model.py \
 
 ## Training new models
 Instructions for training new models can be [found here](TRAINING.md).
+
+## 🔧 Modernization Notes
+This project has been updated for modern Python and PyTorch environments:
+
+### Compatibility Updates
+- **Python 3.8+** compatible (original: 3.5)
+- **PyTorch 1.8+** compatible (original: 0.4.0)
+- Fixed `attrdict` → `addict` for Python 3.12
+- Replaced `.view()` with `.reshape()` for PyTorch 2.0+
+- Added CPU support (removed `.cuda()` calls)
+
+### Updated Requirements
+```bash
+# requirements.txt
+torch>=2.0.0
+torchvision>=0.15.0  
+numpy>=1.24.0
+matplotlib>=3.7.0
+scipy>=1.10.0
+addict>=2.4.0
